@@ -1,0 +1,21 @@
+:root{--bg:#111;--modal:#fff;--accent:#ff6b6b}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#222,#111);color:#111}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+.dialog{background:var(--modal);padding:30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.5);text-align:center;max-width:90%;}
+.dialog h2{margin:0 0 20px;font-size:24px}
+.buttons{position:relative;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+.btn{padding:10px 20px;margin:0 10px;border-radius:8px;border:0;cursor:pointer;font-size:16px}
+.btn:focus{outline:2px solid #ffd}
+.agree{background:var(--accent);color:#fff}
+.disagree{background:#ddd;color:#333;position:fixed;margin:0;z-index:9999}
+
+/* Disabled disagree button styling */
+.disagree:disabled{pointer-events:none;opacity:0.98;filter:none}
+.hidden{display:none}
+.congrats.hidden{display:none !important}
+.congrats{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.8));color:#fff}
+.congrats h1{font-size:96px;margin:0 0 20px;text-shadow:0 4px 16px rgba(0,0,0,.6)}
+#fireworks{position:absolute;inset:0;display:block;width:100%;height:100%}
+
+@media (max-width:420px){.dialog{padding:20px}.congrats h1{font-size:48px}}
